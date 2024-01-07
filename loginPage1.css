@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background: #020410; */
+    background: url(./Images/sky3.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 12.5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.navbar a{
+    position: relative;
+    font-size: 16px;
+    color: #e4e4e4;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 20px;
+}
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    bottom: -6px;
+    transform: translateY(10px);
+    transition: .5s;
+    opacity: 1;
+}
+.navbar a:hover:after{
+    transform: translateY(0);
+    opacity: 1;
+}
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+.search-bar input{
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0 0 0 10px;
+    font-size: 16px;
+    color: #e4e4e4;
+}
+.search-bar input::placeholder{
+    color: #e4e4e4;
+}
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.search-bar i {
+    font-size: 22px;
+    color: #e4e4e4;
+}
+.container{
+   position: absolute;
+   top: 50%;
+   left: 45%;
+   transform: translate(-50%,-50%);
+   width:70%;
+   height: 435px;
+   /*background: url(./images/sky.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;*/
+   border-radius: 10px;
+   backdrop-filter: blur(15px);
+}
+.container .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    background: transparent;
+    padding: 80px;
+    color: #e4e4e4;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.content .logo{
+    font-size: 30px;
+}
+.text-sci h2{
+    font-size: 40px;
+    line-height: 1;
+}
+.text-sci h2 span{
+    font-size: 25px;
+}
+.text-sci p{
+    font-size: 16px;
+    margin: 20px 0;
+}
+.social-icons a i{
+    font-size: 22px;
+    color: #e4e4e4;
+    margin-right: 10px;
+    transition: .5s ease;
+}
+.social-icons a i:hover{
+    transform: scale(1.2);
+    color: blue;
+}
+.logreg-box{
+    position: absolute;
+    top: 15%;
+    right: 1%;
+    width: calc(100% - 58%);
+    height: 100%;
+    overflow: hidden;
+}
+.logreg-box .form-box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    color: #e4e4e4;
+    border-radius: 20px;
+    
+}
+.logreg-box .form-box.login{
+    transform: translateX(0);
+    transition: transform .6s ease;
+    transition-delay: .7s;
+}
+.logreg-box.active .form-box.login{
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+.logreg-box .form-box.register{
+    transform: translateX(430px);
+    transition: transform .5s ease;
+    transition-delay: 0s;
+}
+.logreg-box.active .form-box.register{
+    transform: translateX(0);
+    transition-delay: .7s;
+}
+.form-box h2{
+    font-size: 32px;
+    text-align: center;
+}
+.form-box .input-box{
+    position: relative;
+    /*width: 340px;*/
+    height: 50px;
+    border-bottom: 2px solid #e4e4e4;
+    margin: 30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #e4e4e4;
+    padding-right: 28px;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box .icons{
+    position: absolute;
+    top: 15px;
+    right: 0;
+    font-size: 20px;
+}
+.rememberMe{
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -15px 0 15px;
+}
+.rememberMe label input{
+    accent-color: #e4e4e4;
+    margin-right: 5px;
+}
+.rememberMe a{
+    text-decoration: none;
+    padding-left: 4px;
+}
+.rememberMe a:hover{
+    text-decoration: underline;
+}
+#btn{
+    width: 100%;
+    height: 45px;
+    background: #c4103d;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    box-shadow: 0 0 50px rgba(0,0,0,.5);
+}
+.login-register{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 18px;
+}
+.login-register p a{
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
